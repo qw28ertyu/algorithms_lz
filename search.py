@@ -1,6 +1,7 @@
 import random
 
 spisok = random.sample(range(1,1000001), 100) # создаётся рандомный список из 100 элементов
+spisok.sort() # сортировка списка  
 print(spisok) # вывод списка 
 
 a = int(input('введите искомый элемент: '))
@@ -9,7 +10,7 @@ a = int(input('введите искомый элемент: '))
 shetchik = 0
 if a in spisok:    
     for i in range(0, len(spisok)):
-        shetchik = shetchik + 1 
+        shetchik = shetchik + 1 # прибавляем каждый цикл 1
         if spisok[i] == a: 
             break
     print('Индекс искомого в линейном поиске :', i)
@@ -46,5 +47,5 @@ while (first <= last) and index == -1:
         print('Количество сравнений в бинарном поиске :', shetchik2)
         print('Индекс искомого элемента в бинарном поиске :', index)
 
-else:
-    print('элемент не найден во втором списке')     # вывод ошибки
+    else:
+        print('элемент не найден во втором списке')     # вывод ошибки
